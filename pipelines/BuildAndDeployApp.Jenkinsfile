@@ -12,7 +12,7 @@ pipeline {
 
     parameters {
         string(defaultValue: "pom.xml", description: '', name: 'pom_file_path')
-        string(defaultValue: "git@bitbucket.org:appmgmt/bigly-commons-bom.git", description: '', name: 'repo_url')
+        string(defaultValue: "", description: '', name: 'repo_url')
         string(defaultValue: "develop", description: '', name: 'branch_name')
         booleanParam(defaultValue: true, description: '', name: 'run_tests')
         booleanParam(defaultValue: false, description: '', name: 'nexus_deploy')
