@@ -89,7 +89,21 @@ pipeline {
                 }
             }
         }
-
+        stage("Compile") {
+            steps{
+                script {
+                    maven.compile(MAVEN_TOOL, POM_FILE)
+                }
+            }
+            post {
+                failure {
+                    script {
+                        NOTIFY_META += "<p>Stage: compile</p>"
+                        notify.send(NOTIFY_META, PROJECT)
+                    }
+                }
+            }
+        }
     }
 
     post {
