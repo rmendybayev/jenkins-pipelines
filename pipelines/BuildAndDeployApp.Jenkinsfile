@@ -1,5 +1,4 @@
 // Library should be defined in Global Pipeline Libraries
-library 'jenkins-pipelines@master'
 
 String JENKINS_NODE = 'master'
 String PROJECT, POM_FILE, VERSION
